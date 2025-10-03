@@ -39,10 +39,24 @@
     h1{margin:4px 0;font-size:clamp(28px,4vw,40px)}
     .tagline{color:var(--muted);font-size:clamp(16px,2.4vw,18px)}
     .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);margin-top:20px}
-    .btn{display:inline-block;padding:14px 20px;border-radius:12px;
+
+    /* Knapper */
+    .actions{margin-top:16px;display:flex;flex-wrap:wrap;gap:12px}
+    .btn{
+      flex:1 1 45%; /* like store knapper side ved side */
+      min-width:220px;
+      text-align:center;
+      padding:14px 20px;
+      border-radius:12px;
       background:radial-gradient(120% 120% at 30% 20%,#10b981 0%,#059669 40%,#047857 100%);
-      color:#fff;font-weight:700;text-decoration:none;box-shadow:0 10px 24px rgba(4,120,87,0.25)}
-    .btn:hover{filter:brightness(1.05)}
+      color:#fff;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 10px 24px rgba(4,120,87,0.25);
+      transition:filter .15s ease, transform .08s ease;
+    }
+    .btn:hover{filter:brightness(1.05);transform:translateY(-1px)}
+    .btn:active{filter:brightness(.95);transform:translateY(0)}
     footer{text-align:center;color:var(--muted);font-size:14px;margin-top:36px}
     section{scroll-margin-top:80px}
   </style>
@@ -72,12 +86,12 @@
     <section class="hero">
       <div class="logo-wrap"><img src="gausdal_biogass_logo.jpg" alt="Logo" /></div>
       <h1>Gausdal Biogass DA</h1>
-      <p class="tagline">Biogass fra Gausdal – lokalt forankret, bærekraftig energi for fremtiden.</p>
+      <p class="tagline">Biogass fra Gausdal – lokalt forankret, bærekraftig energi.</p>
     </section>
 
     <section id="om-oss" class="card">
       <h2>Om oss</h2>
-      <p>Gausdal Biogass DA arbeider for å utvikle ett industrielt biogassanlegg basert på råstoff fra landbruket. Prosjektet utvikles i samarbeid med Havila Biogass.</p>
+      <p>Gausdal Biogass DA arbeider for å utvikle lokal, bærekraftig energiproduksjon basert på biogass.</p>
     </section>
 
     <section id="initiativtakere" class="card">
@@ -93,9 +107,14 @@
       <h2>Kontakt</h2>
       <p>E-post: <a href="mailto:post@gausdalbiogass.no">post@gausdalbiogass.no</a></p>
       <p>Telefon: <a href="tel:+4799512860">+47 995 12 860</a> (Jon Fjeldet)</p>
-      <a class="btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=PivioJiZFUCqhcuNCnjaHjZJxWzWx0xKrmhOuhqZV6ZUMTZMWTRUWlFYVVI5SkdPOTE4RlhLT1RUNi4u" target="_blank" rel="noopener">
-        Registrer din interesse her
-      </a>
+      <div class="actions">
+        <!-- Interesseskjema -->
+        <a class="btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=PivioJiZFUCqhcuNCnjaHjZJxWzWx0xKrmhOuhqZV6ZUMTZMWTRUWlFYVVI5SkdPOTE4RlhLT1RUNi4u" 
+           target="_blank" rel="noopener">Registrer din interesse her</a>
+        <!-- Møtepåmelding -->
+        <a class="btn" href="https://forms.office.com/Pages/ResponsePage.aspx?id=PivioJiZFUCqhcuNCnjaHjZJxWzWx0xKrmhOuhqZV6ZUMExNT0RINjFBNE5OOVhUVlFZWEtURDZMRS4u" 
+           target="_blank" rel="noopener">Påmelding biogassmøte 24.10.25</a>
+      </div>
     </section>
 
     <footer>© <span id="year"></span> Gausdal Biogass DA</footer>
